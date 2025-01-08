@@ -5,11 +5,11 @@
 */
 
 
-const favoriteButton = document.getElementById('favoriteButton');
+const favBtn = document.getElementById('favoriteButton');
 
 favoriteButton.addEventListener('click', function() {
   // Get the current item data (e.g., from the current page)
-  let itemId = 'yourItemId'; // Replace with actual item ID
+  let favBtn = 'favoriteButton'; // Replace with actual item ID
   // Check if the item is already in favorites (using localStorage)
 
   let favorites = JSON.parse(localStorage.getItem('favorites')) || []; 
