@@ -10,29 +10,33 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <link rel="images" href="images/">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Playwrite+AU+SA:wght@100..400&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container px-4 px-lg-5">
-                <a class="navbar-brand" href="#!">Nailed It!</a>
+                <a class="navbar-brand text-white" style="font-family: 'Playwrite AU SA', serif;" href="#!">Nailed It!</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="#!">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#!">About</a></li>
+                        <li class="nav-item"><a class="nav-link active text-white" aria-current="page" href="#!">Home</a></li>
+                        <!-- I want to make this where my generator goes -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="#!">About</a></li> -->
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
+                            <a class="nav-link dropdown-toggle text-white" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">Shop</a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#!">All Products</a></li>
+                                <li><a class="dropdown-item" href="#!">Favorites</a></li>
                                 <li><hr class="dropdown-divider"/></li>
                                 <li><a class="dropdown-item" href="#!">Popular Items</a></li>
-                                <li><a class="dropdown-item" href="#!">New Arrivals</a></li>
+                                <li><a class="dropdown-item" href="#!">Sale Items</a></li>
                             </ul>
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-dark" type="submit">
+                        <button class="btn btn-outline-light" type="submit">
                             <i class="bi-cart-fill me-1"></i>
                             Cart
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
@@ -44,8 +48,8 @@
         <header class="bg-dark py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="text-center text-white">
-                    <h1 class="display-4 fw-bolder">Shop in style</h1>
-                    <p class="lead fw-normal text-white-50 mb-0">With this shop hompeage template</p>
+                    <h1 class="display-4 fw-bolder" style="font-family: 'Playwrite AU SA', serif;">Nailed It!</h1>
+                    <p class="lead fw-normal text-white-50 mb-0">Good Quality Press-On's for a Great Price</p>
                 </div>
             </div>
         </header>
@@ -55,42 +59,49 @@
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale</div>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/9b/ef/79/9bef79690bd00db0eb24b0ae2c17712e.jpg" alt="#Red #Medium #Nails" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder">#Red #Short #Round</h5>
-                                    $20.00
+                                    <h5 class="fw-bolder text-white">#Red #Short #Round</h5>
+                            <div class="d-flex justify-content-center small text-white mb-2">
+                                <div class="bi-star-fill"></div>
+                                <div class="bi-star"></div>
+                                <div class="bi-star"></div>
+                                <div class="bi-star"></div>
+                                <div class="bi-star"></div>
+                            </div>
+                            <span class="text-muted text-decoration-line-through">$33.45</span>    
+                                    $15.99
                                 </div>
                             </div>
-                            <div class="d-flex justify-content-center small text-warning mb-2">
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star-fill"></div>
-                                <div class="bi-star"></div>
-                                <div class="bi-star"></div>
-                                <div class="bi-star"></div>
-                            </div>
+                            
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
-                            <button class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
-                                <i class="bi bi-heart-fill"></i>
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
                             </button>
                             <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="data:image/jpeg;base64,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" alt="..." />
+                            <img class="card-img-top" src="https://i.pinimg.com/474x/d1/ab/36/d1ab3673f6f89beee13fd421bca51982.jpg"
+                             alt="#Red#Medium#Coffin#Floral" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
+                                    <h5 class="fw-bolder text-white">#Red #Medium #Coffin #Floral</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -98,68 +109,83 @@
                                         <div class="bi-star"></div>
                                     </div>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $40.00
+                                    <span class="text-muted text-decoration-line-through">$54.95</span>
+                                    $42.75
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Product image-->
-                            <img class="card-img-top img-fluid" src="https://i.pinimg.com/736x/67/db/da/67dbda7da043f03b9d8da732e93e71be.jpg" alt="image-responsive"/>
+                            <img class="card-img-top img-fluid" src="https://i.pinimg.com/736x/67/db/da/67dbda7da043f03b9d8da732e93e71be.jpg" alt="#Red#Long#Square"/>
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">#Red #Long #Spooky #Red</h5>
-                                    <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
-                                </div>
-                            </div>
-                            <!-- Product actions-->
-                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Favorites</a></div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col mb-5">
-                        <div class="card h-100">
-                            <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/736x/c7/11/2d/c7112ddd854fecca6d5457c7aad3b54b.jpg" 
-                            alt="..." />
-                            <!-- Product details-->
-                            <div class="card-body p-4">
-                                <div class="text-center">
-                                    <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
-                                    <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <h5 class="fw-bolder text-white">#Red #Long #Stilleto #Spooky</h5>
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-half"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    $69.99
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <!-- Product image-->
+                            <img class="card-img-top" src="https://i.pinimg.com/736x/c7/11/2d/c7112ddd854fecca6d5457c7aad3b54b.jpg" 
+                            alt="#Red#Square#Long#Winter" />
+                            <!-- Product details-->
+                            <div class="card-body p-4">
+                                <div class="text-center">
+                                    <!-- Product name-->
+                                    <h5 class="fw-bolder text-white">#Red #Square #Long #Winter</h5>
+                                    <!-- Product reviews-->
+                                    <div class="d-flex justify-content-center small text-white mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
+                                    </div>
+                                    <!-- Product price-->
+                                    $35.00
+                                </div>
+                            </div>
+                            <!-- Product actions-->
+                            <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col mb-5">
+                        <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale</div>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/61/93/ce/6193ce4b1d8d9fb34d8624daf505e098.jpg" 
                             alt="#Green#Short#Square" />
@@ -167,107 +193,133 @@
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Sale Item</h5>
+                                    <h5 class="fw-bolder text-white">#Green #Short #Square</h5>
+                                    <div class="d-flex justify-content-center small text-white mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                    </div>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$50.00</span>
-                                    $25.00
+                                    <span class="text-muted text-decoration-line-through">$45.00</span>
+                                    $34.99
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale</div>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/736x/e1/70/df/e170df0cc8ae7424a8da9c95f367ec5f.jpg" alt="#Green#Long#Floral" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Fancy Product</h5>
+                                    <h5 class="fw-bolder text-white">#Green #Long #Coffin #Floral</h5>
+                                    <div class="d-flex justify-content-center small text-white mb-2">
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-half"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
+                                    </div>
                                     <!-- Product price-->
+                                    <span class="text-muted text-decoration-line-through">$60.00</span>
                                     $45.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">View options</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">View options</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Sale badge-->
-                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Sale</div>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/474x/2b/10/d8/2b10d8677746141fbea5c846a53bf701.jpg" 
-                            alt="#green#medium#winter#square" />
+                            <img class="card-img-top" src="https://i.pinimg.com/474x/2b/10/d8/2b10d8677746141fbea5c846a53bf701.jpg" alt="#green#medium#winter#square" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Special Item</h5>
+                                    <h5 class="fw-bolder text-white">#Green #Medium #Square #Winter</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-half"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
                                     </div>
                                     <!-- Product price-->
-                                    <span class="text-muted text-decoration-line-through">$20.00</span>
+                                    <span class="text-muted text-decoration-line-through">$25.00</span>
                                     $18.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/474x/80/e5/c1/80e5c1c72926667f38411fb2218d20ab.jpg" 
-                            alt="#Green#XL#Square" />
+                            <img class="card-img-top" src="https://i.pinimg.com/474x/80/e5/c1/80e5c1c72926667f38411fb2218d20ab.jpg" alt="#Green#XL#Square" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Green #Square #XL</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-half"></div>
+                                        <div class="bi-star"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    $70.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/a6/d3/c3/a6d3c326eb91491b75190d6965d1fa2a.jpg" alt="#Orange#Coffin#Fall#Long" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Orange #Long #Coffin #Fall</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -275,26 +327,29 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    $66.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/ba/6f/a1/ba6fa17bae5aaf800c2f99309b69145c.jpg" alt="#Orange#Short#Square#Spooky" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Orange #Short #Square #Spooky</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -302,26 +357,29 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    $50.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/d2/23/1f/d2231f298bd9e21a7d10de0e4ced56d8.jpg" alt="#Orange#Medium#Floral#Square" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Orange #Medium #Floral #Square</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -329,53 +387,61 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    $55.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale</div>
                             <!-- Product image-->
-                            <img class="card-img-top" src="https://i.pinimg.com/474x/c0/8e/be/c08ebe96860045294985c5a82773b8a7.jpg" alt="#Orange#Stilleto#Long" />
+                            <img class="card-img-top" src="https://i.pinimg.com/474x/c0/8e/be/c08ebe96860045294985c5a82773b8a7.jpg" alt="#Orange#Stilleto#XL" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Orange #XL #Stilleto</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                    <div class="d-flex justify-content-center small text-white mb-2">
+                                        <div class="bi-star-half"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    <span class="text-muted text-decoration-line-through">$70.00</span>
+                                    $55.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/63/ad/4d/63ad4de69a3f576dfb95156de119b7e1.jpg" alt="#Pink#Short#Square#Floral" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Pink #Short #Square #Floral</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
@@ -383,93 +449,104 @@
                                         <div class="bi-star-fill"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    $39.99
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/8c/13/fd/8c13fd206b5d7fdae612beb8cb2d3af9.jpg" alt="#Pink#Medium#Spooky" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Pink #Medium #Square #Spooky</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    $58.75
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
+                            <div class="badge bg-dark text-white position-absolute" style="top: 0.5rem; left: 0.5rem">Sale</div>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/a7/34/1c/a7341cb200b38a6e542773e66766ab5c.jpg" alt="#Pink#Coffin#Long#Winter" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Pink #Coffin #Long #Winter</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
+                                        <div class="bi-star"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    <span class="text-muted text-decoration-line-through">$29.99</span>
+                                    $19.99
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
                     <div class="col mb-5">
                         <div class="card h-100">
+                            <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
+                                <i class="bi bi-heart"></i>
+                            </button>
                             <!-- Product image-->
                             <img class="card-img-top" src="https://i.pinimg.com/474x/98/f0/16/98f016111e62821230bc749eecaaa550.jpg" alt="#Pink#Short#Round" />
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
                                     <!-- Product name-->
-                                    <h5 class="fw-bolder">Popular Item</h5>
+                                    <h5 class="fw-bolder text-white">#Pink #Short #Round</h5>
                                     <!-- Product reviews-->
-                                    <div class="d-flex justify-content-center small text-warning mb-2">
+                                    <div class="d-flex justify-content-center small text-white mb-2">
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-fill"></div>
-                                        <div class="bi-star-fill"></div>
+                                        <div class="bi-star-half"></div>
                                     </div>
                                     <!-- Product price-->
-                                    $40.00
+                                    $20.00
                                 </div>
                             </div>
                             <!-- Product actions-->
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
