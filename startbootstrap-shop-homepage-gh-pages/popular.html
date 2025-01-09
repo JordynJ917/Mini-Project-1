@@ -56,6 +56,20 @@
         <!-- Section-->
         <section class="py-5">
             <div class="container px-4 px-lg-5 mt-5">
+                <section>
+                <h3 style="font-family: 'Playwrite AU SA', serif; color: #696EFF;">Popular Items:</h3>
+                <div id="sort">
+                    <label >Sort By:
+                        <select name="sort_order" id="sort_order" onchange="sortProducts(event)">
+                            <option value="id">Default Ordering</option>
+                            <option value="price_lohi">Price (Low to High)</option>
+                            <option value="price_highlo">Price (High to Low)</option>
+                            <option value="titl_AZ">Title (A to Z)</option>
+                            <option value="title_za">Title (Z to A)</option>
+                        </select>
+                    </label>
+                </div>
+                </section>
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
                         <div class="card h-100">
