@@ -8,25 +8,7 @@
 const favBtn = document.getElementById('favoriteButton');
 
 favoriteButton.addEventListener('click', function() {
-  // Get the current item data (e.g., from the current page)
-  let favBtn = 'favoriteButton'; // Replace with actual item ID
-  // Check if the item is already in favorites (using localStorage)
 
-  let favorites = JSON.parse(localStorage.getItem('favorites')) || []; 
+  let favBtn = 'favoriteButton'; 
 
-  if (favorites.includes(itemId)) {
 
-    // Remove from favorites
-
-    favorites = favorites.filter(id => id !== itemId);
-
-    // Update button appearance (e.g., change icon to unfilled heart)
-
-  } else {
-    // Add to favorites
-    favorites.push(itemId);
-    // Update button appearance (e.g., change icon to filled heart)
-  }
-  localStorage.setItem('favorites', JSON.stringify(favorites));
-
-});
