@@ -36,11 +36,13 @@
                         </li>
                     </ul>
                     <form class="d-flex">
-                        <button class="btn btn-outline-light" type="submit">
+                        <a href="cart.html" class="btn btn-outline-light btn-lg " role="button" aria-disabled="true">
+                        
                             <i class="bi-cart-fill me-1"></i>
                             Cart
                             <span class="badge bg-dark text-white ms-1 rounded-pill">0</span>
-                        </button>
+                        
+                    </a>
                     </form>
                 </div>
             </div>
@@ -53,25 +55,26 @@
                 </div>
             </div>
         </header>
-        <!-- Section-->
-        <section class="py-5">
-            <div class="container px-4 px-lg-5 mt-5">
-                <section>
+        <section>
                     <div id="sort">
                         <label >Sort By:
                             <select name="sort_order" id="sort_order" onchange="sortProducts(event)">
                                 <option value="id">Default Ordering</option>
                                 <option value="price_lohi">Price (Low to High)</option>
-                                <option value="price_highlo">Price (High to Low)</option>
+                                <option value="price_hilo">Price (High to Low)</option>
                                 <option value="titl_AZ">Title (A to Z)</option>
                                 <option value="title_za">Title (Z to A)</option>
                             </select>
                         </label>
                     </div>
                     </section>
+                    <!-- Section-->
+        <section id="product-list" class="py-5">
+            <div class="container px-4 px-lg-5 mt-5">
+                
                 <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
                     <div class="col mb-5">
-                        <div class="card h-100">
+                        <div id="" class="card h-100">
                             <button id="favoriteButton" class="btn btn-danger position-absolute" type="input" style="top: 0.5rem; right: 0.5rem">
                                 <i class="bi bi-heart"></i>
                             </button>
@@ -81,22 +84,22 @@
                             <!-- Product details-->
                             <div class="card-body p-4">
                                 <div class="text-center">
-                                    <h5 class="fw-bolder text-white">#Red #Short #Round</h5>
-                            <div class="d-flex justify-content-center small text-white mb-2">
+                                    <h5 class="card-title fw-bolder text-white">#Red #Short #Round</h5>
+                            <div class="card-text d-flex justify-content-center small text-white mb-2">
                                 <div class="bi-star-fill"></div>
                                 <div class="bi-star"></div>
                                 <div class="bi-star"></div>
                                 <div class="bi-star"></div>
                                 <div class="bi-star"></div>
                             </div>
-                                <div class="price">
+                            <div class="card-subtitle price">
                             <span class="text-muted text-decoration-line-through">$33.45</span>    
                                     $15.99
                                 </div>
                             </div>
-                            
+                        </div>    
                             <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="#">Add to cart</a></div>
+                                <div class="text-center"><a class="btn btn-outline-light mt-auto" href="cart.html">Add to cart</a></div>
                             </div>
                         </div>
                     </div>
@@ -581,10 +584,10 @@
                                         <div class="bi-star-fill"></div>
                                         <div class="bi-star-half"></div>
                                     </div>
-                                    <div class="price">
+                                    
                                     <!-- Product price-->
                                     $20.00
-                                    </div>
+                                    
                                 </div>
                             </div>
                             <!-- Product actions-->
